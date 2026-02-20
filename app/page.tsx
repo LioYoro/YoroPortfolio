@@ -13,7 +13,7 @@ export default function Home(): React.JSX.Element {
       <Banner />
       <Skills />
       <About />
-        <Experience />
+      <Experience />
       <Projects />
       <Footer />
     </main>
