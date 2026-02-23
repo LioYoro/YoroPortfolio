@@ -22,15 +22,15 @@ interface Project {
   link?: string
   github?: string
   badges: string[]
+  files?: { name: string; path: string }[]
 }
 
 const featuredProjects: Project[] = [
   {
     id: 1,
     title: "Academic Resource & Knowledge (ARK)",
-    badges: ["AI", "GPT", "BERT", "Database", "Full-Stack", "VPS"],
-    description:
-      "Full-stack AI-powered academic library platform. Contributed to backend and frontend development, integrating GPT for semantic search and BERT (MiniLM) for standard query processing to improve retrieval accuracy beyond traditional SQL matching. Implemented email notification workflows and a book recommendation module, supported database design and interface integration, and handled production deployment using a Hostinger domain and Hosting VPS (KVM) server.",
+    badges: ["AI", "GPT", "BERT", "MiniLM", "Database Management", "Full-Stack", "VPS", "Role-Based Access Control", "Email Notifications", "Book Recommendation System", "Semantic Search", "Statistical Summaries"],
+    description: "Academic Resource & Knowledge (ARK) is a full-stack AI-powered academic library platform developed as a capstone project. The system modernizes traditional library services by integrating intelligent search, recommendation systems, and interactive academic engagement features.\n\nI contributed to both backend and frontend development, implementing GPT-powered semantic search to allow contextual query understanding beyond traditional keyword-based SQL matching. Additionally, BERT (MiniLM) was integrated for efficient natural language query processing, significantly improving retrieval accuracy and relevance ranking of academic resources.\n\nBeyond search optimization, the platform includes a dynamic book recommendation engine that suggests materials based on a user’s course and education level. The system also features engagement-driven functionalities such as bookmarks, comments, likes and dislikes, enabling students to interact with resources and contribute feedback within the academic community.\n\nThe capstone system extends beyond a digital library by incorporating an Event Proposal Submission module, allowing users to propose academic events directly through the platform. Administrators can review, approve, and publish events seamlessly.\n\nAdvanced statistical dashboards were implemented, including visual analytics for Top Trending Books, Top Commented Books, and engagement metrics. On the admin side, the system provides tools for book status modification, reservation handling, event creation and posting, and visual performance monitoring to support data-driven decision making.\n\nI also implemented automated email notification workflows for reservations and system updates, supported database schema design and normalization, handled interface integration, and participated in production deployment using a Hostinger domain and Hosting VPS (KVM) server. The project demonstrates applied AI integration, scalable system architecture, role-based access control, semantic information retrieval, and production-ready deployment practices.",
     cover: "/projects/ark/HEXTECH-ARK-LOGO-WHITE.jpeg",
     images: [
       "/projects/ark/1.png",
@@ -43,13 +43,15 @@ const featuredProjects: Project[] = [
       "/projects/ark/8.png",
     ],
     github: "https://github.com/LioYoro/HexTech-ARK_Library_System",
+    files: [
+      { name: "Capstone Documentation", path: "/projects/ark/HEXTECH - ARK CAPSTONE.pdf" }
+    ],
   },
   {
     id: 2,
     title: "Waste2Wealth",
     badges: ["Vanilla PHP", "E-Commerce", "Recycling", "MySQL", "Database Management", "SDG-Focused"],
-    description: "PHP platform for trading recyclable waste. I handled the full stack development, including frontend design and database management, ensuring the platform is fully scalable and responsive. Users can track the status of all bottles to be sold, with prices per kilo dynamically set based on research and economic trends, providing accurate and fair valuation for recyclable materials. On the admin side, statuses can be updated as ‘On the Way for Pickup’, ‘Pending for Pickup’, or ‘Completed’, enabling efficient management of transactions and smooth coordination between sellers and recyclers. The platform emphasizes efficiency, sustainability, and a seamless user experience for all stakeholders.",
-    cover: "/projects/w2w/W2W.jpg",
+    description: "PHP platform for trading recyclable waste developed as a course project for Integrative Programming. I handled the full stack development, including frontend design and database management, ensuring the platform is fully scalable and responsive. Users can track the status of all bottles to be sold, with prices per kilo dynamically set based on research and economic trends, providing accurate and fair valuation for recyclable materials. On the admin side, statuses can be updated as ‘On the Way for Pickup’, ‘Pending for Pickup’, or ‘Completed’, enabling efficient management of transactions and smooth coordination between sellers and recyclers. The platform emphasizes efficiency, sustainability, and a seamless user experience for all stakeholders.",    cover: "/projects/w2w/W2W.jpg",
     images: [
       "/projects/w2w/1.png",
       "/projects/w2w/2.PNG",
@@ -57,6 +59,42 @@ const featuredProjects: Project[] = [
     ],
     github: "https://github.com/LioYoro/Waste2Wealth",
   },
+  {
+  id: 3,
+  title: "JRU Online Clinic Appointment System",
+  badges: [
+    "PHP",
+    "MySQL",
+    "Google Authentication",
+    "OTP Verification",
+    "Software Design & Implementation",
+    "Role-Based Access Control",
+    "Web Hosting",
+    "Queue Management System"
+  ],
+  description: "A full-stack web-based Clinic Appointment Management System developed as a course project for Software Design and Implementation. The system digitalizes the school clinic workflow, providing a structured and efficient platform for students, doctors, and administrators.\n\nOn the user side, students can create, reschedule, cancel, and view both current and past medical appointments. The platform also maintains a medical history record for successful consultations, ensuring proper documentation and accessibility of past clinical interactions.\n\nOn the doctor side, healthcare personnel can monitor the live queue of appointments. The system includes a 30-minute grace period feature that automatically cancels unattended appointments to maintain scheduling efficiency. During consultations, doctors can record remarks, current symptoms, prescriptions, and optionally issue medical certificates directly through the system.\n\nOn the admin side, administrators can monitor system logins, manage accounts per role (Staff, User, Admin), and update account details such as ID, name, email, and assigned role. The system implements secure authentication mechanisms including Google Authentication and OTP verification to enhance security.\n\nThe project demonstrates structured system architecture, database normalization, role-based access control, workflow automation, and secure web deployment practices.",
+  cover: "/projects/clinic/clinicLogo.png",
+  images: [
+    "/projects/clinic/1.png",
+    "/projects/clinic/2.png",
+    "/projects/clinic/3.png",
+    "/projects/clinic/4.png",
+    "/projects/clinic/5.png",
+    "/projects/clinic/6.png",
+    "/projects/clinic/7.png",
+    "/projects/clinic/8.png",
+    "/projects/clinic/9.png",
+    "/projects/clinic/10.png",
+    "/projects/clinic/11.png",
+    "/projects/clinic/12.png",
+    "/projects/clinic/13.png",
+    "/projects/clinic/14.png"
+  ],
+  github: "https://github.com/LioYoro/YoroClinicAppSys",
+  files: [
+    { name: "System Diagrams", path: "/projects/clinic/JRU CLINIC APPOINTMENT SYSTEM DIAGRAMS.pdf" }
+  ],
+}
 ]
 
 /* ---------- GitHub Buttons ---------- */
@@ -88,11 +126,11 @@ function GithubTextButton({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-2 mt-3 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/60 transition text-sm"
+      className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/60 transition text-sm"
       aria-label="View Repository"
     >
       <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-white flex-shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -100,6 +138,63 @@ function GithubTextButton({ url }: { url: string }) {
             </svg>
       View Repository
     </Link>
+  )
+}
+
+/* ---------- Files Button ---------- */
+
+function FilesIconButton({ files }: { files: { name: string; path: string }[] }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {files.map((file, idx) => (
+        <a
+          key={idx}
+          href={file.path}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={(e) => e.stopPropagation()}
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-blue-500/30 hover:border-blue-500/60 transition"
+          aria-label={`View ${file.name}`}
+          title={file.name}
+        >
+          <svg
+            className="w-5 h-5 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+        </a>
+      ))}
+    </div>
+  )
+}
+
+function FilesTextButton({ files }: { files: { name: string; path: string }[] }) {
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      {files.map((file, idx) => (
+        <a
+          key={idx}
+          href={file.path}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-white/10 hover:bg-white/20 border border-blue-500/30 hover:border-blue-500/60 transition text-sm"
+          aria-label={`View ${file.name}`}
+        >
+          <svg
+            className="w-5 h-5 text-white flex-shrink-0"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+          </svg>
+          {file.name}
+        </a>
+      ))}
+    </div>
   )
 }
 
@@ -143,9 +238,14 @@ export default function Projects(): React.JSX.Element {
               </div>
 
               {/* FRONT: icon only */}
-              {project.github && (
-                <div className="pt-2">
-                  <GithubIconButton url={project.github} />
+              {(project.github || project.files) && (
+                <div className="mt-4 flex items-center gap-3">
+                  {project.github && (
+                    <GithubIconButton url={project.github} />
+                  )}
+                  {project.files && (
+                    <FilesIconButton files={project.files} />
+                  )}
                 </div>
               )}
             </CardContent>
@@ -168,7 +268,7 @@ export default function Projects(): React.JSX.Element {
             <div className="overflow-y-auto">
 
               {/* header */}
-              <div className="p-5 border-b border-zinc-700 text-white">
+              <div className="p-5 border-b border-zinc-700 text-white max-h-[50vh] overflow-y-auto">
                 <h2 className="text-2xl font-bold">{active.title}</h2>
 
                 <p className="text-white/70 mt-2 text-sm">
@@ -184,9 +284,15 @@ export default function Projects(): React.JSX.Element {
                 </div>
 
                 {/* POPUP: text + logo */}
-                {active.github && (
-                  <GithubTextButton url={active.github} />
-                )}
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  {active.github && (
+                    <GithubTextButton url={active.github} />
+                  )}
+
+                  {active.files && (
+                    <FilesTextButton files={active.files} />
+                  )}
+                </div>
 
                 {active.link && (
                   <Link
