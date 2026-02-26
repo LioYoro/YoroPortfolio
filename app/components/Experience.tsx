@@ -40,6 +40,16 @@ export default function Experience(): React.JSX.Element {
             </p>
             <a href="/databasecert.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm block mt-2">View certificate (PDF)</a>
           </div>
+          <div>
+            <h4 className="font-semibold">AI Singapore — AI for Industry Certification</h4>
+            <p className="text-sm text-white/70">May 20, 2025</p>
+            <p className="text-sm text-white/80 mt-2">
+              Issued by AI Singapore, this certification demonstrates foundational knowledge in artificial intelligence, including machine learning concepts, data-driven problem solving, and real-world AI applications. The program emphasizes practical industry use-cases and responsible AI adoption, preparing learners to integrate AI solutions into business and technical environments.
+            </p>
+            <a href="/yoroAiSingapore.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm block mt-2">
+              View certificate (PDF)
+            </a>
+          </div>
         </div>
       ),
       icon: "/cards/card-2.png",
@@ -70,7 +80,7 @@ export default function Experience(): React.JSX.Element {
                   <div className="text-white/60">{isOpen ? "−" : "+"}</div>
                 </button>
 
-                <div className={`mt-4 text-white/80 transition-max-height duration-300 overflow-hidden ${isOpen ? "max-h-96" : "max-h-0"}`}>
+                <div className={`mt-4 text-white/80 transition-max-height duration-300 overflow-hidden ${isOpen ? "max-h-[1000px]" : "max-h-0"}`}>
                   {item.content}
                 </div>
               </div>
