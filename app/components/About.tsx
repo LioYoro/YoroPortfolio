@@ -5,8 +5,8 @@ export default function About(): React.JSX.Element {
         <div className="text-center mb-8">
           <h2 className="text-4xl font-bold text-white mb-4">About</h2>
           <p className="text-lg text-white/80 max-w-3xl mx-auto">
-            A dedicated and goal-oriented BS Information Technology student seeking an on-the-job training position to apply academic learning in real-world environments. Highly motivated to gain practical experience in software development, system implementation, and IT support. Committed to continuous learning, and contributing to efficient, technology-driven solutions.
-          </p>
+            A dedicated and goal-oriented BS Information Technology graduate with hands-on experience in full-stack development, backend systems, database management, API integration, and AI-assisted applications using Python, JavaScript, PHP, SQL, and modern web frameworks, with exposure to OCR, LLM integration, and Docker-based deployments, seeking an on-the-job training opportunity to apply academic knowledge in a real-world environment while further developing skills in software development, system implementation, and technology-driven solutions.          
+            </p>
 
         </div>
       </div>

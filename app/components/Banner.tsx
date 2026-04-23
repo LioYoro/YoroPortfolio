@@ -57,7 +57,7 @@ export default function Banner(): React.JSX.Element {
               {/* greeting removed per user's request */}
               <div className="relative">
                 <Image
-                  src="/assets/ID PICTURE - YORO.jpg"
+                  src="/assets/1x1 Pic - White Background.png"
                   alt="Leonardo Antero SP. Yoro"
                   width={300}
                   height={300}

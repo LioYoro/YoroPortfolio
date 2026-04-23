@@ -13,33 +13,32 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "Yoro Portfolio",
-  description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products that balance user needs and business goals. 3+ years of industry experience.",
+  description: "Personal portfolio website for Yoro, showcasing projects, skills, and experience.",
   keywords: [
-    "Ibrahim Memon",
-    "Software Engineer",
-    "UI/UX Designer",
-    "Frontend Developer",
-    "React Developer",
-    "Next.js Developer",
-    "Web Designer",
-    "WebHR Engineer",
+    "Yoro",
     "Portfolio",
+    "Web Developer",
+    "Designer",
+    "Next.js",
+    "React",
+    "Frontend",
+    "Personal Website",
   ],
-  authors: [{ name: "Ibrahim Memon" }],
-  creator: "Ibrahim Memon",
-  publisher: "Ibrahim Memon",
+  authors: [{ name: "Yoro" }],
+  creator: "Yoro",
+  publisher: "Yoro",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ibiimemon.com",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR. Creating meaningful and delightful digital products.",
-    siteName: "Ibrahim Memon Portfolio",
+    url: "https://yoro-portfolio.vercel.app",
+    title: "Yoro Portfolio",
+    description: "Personal portfolio website for Yoro, showcasing projects, skills, and experience.",
+    siteName: "Yoro Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ibrahim Memon - Software Engineer & UI/UX Designer",
-    description: "A self-taught UI/UX designer and Software Engineer at WebHR.",
+    title: "Yoro Portfolio",
+    description: "Personal portfolio website for Yoro, showcasing projects, skills, and experience.",
   },
   robots: {
     index: true,
@@ -68,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://ibiimemon.com" />
+        <link rel="canonical" href="https://yoro-portfolio.vercel.app" />
         {/* Favicon — replace /favicon.ico with your file in /public */}
         <link rel="icon" href="/logo/TabIcon.svg" />
       </head>
