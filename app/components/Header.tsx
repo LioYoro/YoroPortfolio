@@ -19,6 +19,16 @@ export default function Header(): React.JSX.Element {
             <li className="m-0 p-0">
               <Link href="#lab" className="text-white hover:text-blue-400 transition-colors text-base font-normal">Featured Projects</Link>
             </li>
+            <li className="m-0 p-0">
+              <a
+                href="/YORO, LEONARDO ANTERO - BSIT  - RESUME.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/60 transition text-sm font-medium"
+              >
+                Resume
+              </a>
+            </li>
           </ul>
         </div>
       </nav>

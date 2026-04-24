@@ -48,6 +48,33 @@ export const featuredProjects: Project[] = [
 
   {
     id: 2,
+    title: "SYNOPSIS",
+    badges: [
+      "React.js",
+      "Qwen3.5-8B",
+      "EasyOCR",
+      "PaddleOCR",
+      "ChromaDB",
+      "RAG",
+      "Docker",
+      "Full-Stack",
+      "LLM Integration",
+      "Task Tracking",
+      "OJT Project"
+    ],
+    description: "SINTOSIS ENGINE is an OJT project—a full-stack Viber chat summarization and task tracking system that transforms chat screenshots into structured daily reports. The system automates the tedious process of converting conversation screenshots into actionable insights.\n\nI contributed to both backend and frontend development, implementing an end-to-end pipeline from OCR extraction to LLM output generation. The screen watcher script records new Viber messages with auto-scrolling capability, capturing screenshots throughout the day. At day's end, these screenshots are processed through EasyOCR and PaddleOCR to extract text for downstream analysis.\n\nThe extracted text is compiled into JSON files, which are then fed into Qwen3.5-8B LLM for automated summarization. I implemented detailed prompt engineering with specialized instructions for generating overviews, conversational threads, and task listings. A separate LLM call isolates task listing for improved performance and accuracy.\n\nThe system utilizes Retrieval-Augmented Generation (RAG) concepts with ChromaDB for embedding storage and contextual retrieval, enhancing summarization relevance. Output is generated in both HTML and text formats for frontend display.\n\nOn the admin side, the platform provides user management, department management, and task aliasing for organized tracking. Regular users can view summaries, access historical reports, and execute the watcher script. The entire system is Dockerized for consistent environment setup and application portability, ensuring seamless deployment across different systems.",
+    cover: "/projects/synopsis/1.jpg",
+    images: [
+      "/projects/synopsis/1.jpg",
+      "/projects/synopsis/2.jpg",
+      "/projects/synopsis/3.jpg",
+      "/projects/synopsis/4.png"
+    ],
+    github: "https://github.com/catapangBERT/SINTOSIS-ENGINE1",
+  },
+
+  {
+    id: 3,
     title: "Waste2Wealth",
     badges: [
       "PHP",
@@ -68,7 +95,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "JRU Online Clinic Appointment System",
     badges: [
       "PHP",
@@ -105,7 +132,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Sustainalyze",
     badges: [
       "Machine Learning",
@@ -141,7 +168,7 @@ export const featuredProjects: Project[] = [
   /* ------------------ ML/IEEE Projects ------------------ */
   
   {
-    id: 5,
+    id: 6,
     title: "K-Nearest Neighbors (Iris Classification)",
     badges: ["Machine Learning", "kNN", "Classification", "Python", "Data Analysis"],
     description: "Applied K-Nearest Neighbors to classify Iris flower species, analyzing how neighbor size affects bias–variance tradeoff. Validated with metrics and visualizations, highlighting the importance of parameter tuning and data quality.",
@@ -155,7 +182,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Linear Regression (NBA Analytics)",
     badges: ["Machine Learning", "Linear Regression", "Python", "Sports Analytics"],
     description: "Used regression to predict NBA players’ field goal attempts from performance metrics, emphasizing feature selection. Points scored alone provided high predictive power (R² = 0.969), while multiple features slightly improved accuracy.",
@@ -168,7 +195,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Logistic Regression & Decision Tree",
     badges: ["Machine Learning", "Multinomial Logistic Regression", "Decision Tree"],
     description: "Compared Logistic Regression and Decision Tree for multinomial classification. Decision Tree gave higher peak accuracy but more variability; Logistic Regression was stable. Highlights strategic hyperparameter tuning and model selection for balanced predictive power.",
@@ -183,7 +210,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Multilayer Perceptron (Diabetes Prediction)",
     badges: ["Machine Learning", "Neural Network", "MLP", "Python", "Healthcare Analytics"],
     description: "Neural network for diabetes prediction using health attributes. Tuned hidden layers, solver, learning rate, and batch size. Adam solver outperformed others; careful complexity control improved generalization.",
@@ -197,7 +224,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: "Course Project – Ensemble & Boosting",
     badges: ["Machine Learning", "Ensemble", "Boosting", "Bagging", "MLP", "Diabetes Prediction", "Python"],
     description: "Compared traditional models (LR, DT, SVM) with ensemble methods for diabetes detection. Boosting achieved highest predictive performance, bagging improved stability. Highlights ensemble techniques for robust healthcare ML applications.",
@@ -211,8 +238,8 @@ export const featuredProjects: Project[] = [
   },
 
 {
-  id: 10,
-  title: "NLP Text Preprocessing",
+    id: 11,
+    title: "NLP Text Preprocessing",
   badges: ["Python", "NLP", "Text Cleaning", "Data Preprocessing", "Pandas", "Tokenization", "Stopword Removal", "Lemmatization"],
   description: "Applied text preprocessing techniques on a labeled Twitter dataset for hate speech and offensive language detection. Steps included lowercasing, contraction expansion, removal of usernames, URLs, numbers, special characters, stopwords, and repeated-character normalization. Preprocessing reduced the dataset from 349,862 to 199,158 words, improving semantic clarity for NLP analysis.",
   cover: "/projects/ieee/textpre.PNG",
@@ -225,8 +252,8 @@ export const featuredProjects: Project[] = [
 },
 
 {
-  id: 11,
-  title: "NLP Text Representation",
+    id: 12,
+    title: "NLP Text Representation",
   badges: ["Python", "NLP", "One-Hot Encoding", "Bag of Words", "TF-IDF", "Text Representation"],
   description: "Introduced core NLP text representation methods including dictionary lookup, one-hot encoding, Bag of Words, and TF-IDF, converting raw text into numerical formats suitable for models. TF-IDF improved relevance weighting across corpora. Implemented in Python using scikit-learn, emphasizing understanding each representation method for downstream tasks like classification, clustering, and language modeling.",
   cover: "/projects/ieee/textrep1.PNG",
@@ -239,8 +266,8 @@ export const featuredProjects: Project[] = [
 },
 
 {
-  id: 12,
-  title: "NLP Functions",
+    id: 13,
+    title: "NLP Functions",
   badges: ["Python", "NLP", "Text Classification", "Sentiment Analysis", "POS Tagging", "Text Summarization"],
   description: "Developed NLP models for sports journalism: text classification, sentiment analysis, part-of-speech tagging, and text summarization. Preprocessed and manually annotated datasets enabled evaluation against high-performance benchmarks: classification 92%, sentiment 88%, POS tagging 84.6%, summarization ROUGE-1 F1 88.8%. Highlights the importance of preprocessing, dataset annotation, and evaluation for effective NLP pipelines.",
   cover: "/projects/ieee/nlpMdlsTS.PNG",
@@ -253,8 +280,8 @@ export const featuredProjects: Project[] = [
 },
 
 {
-  id: 13,
-  title: "BERT Question Answering",
+    id: 14,
+    title: "BERT Question Answering",
   badges: ["Python", "NLP", "BERT", "DistilBERT", "RoBERTa", "Question Answering", "Pretrained Models"],
   description: "Evaluated pretrained question-answering models (BERT, DistilBERT, BERT-Large, RoBERTa) on contextual questions from local news articles. Metrics included Exact Match, F1 score, confidence, and inference time. DistilBERT achieved the best balance of accuracy and speed; RoBERTa had comparable accuracy with slightly slower inference; BERT-Large had lower scores and longest inference. Emphasizes impact of model architecture, pre-training, and fine-tuning in extractive QA.",
   cover: "/projects/ieee/bert1.PNG",
@@ -267,8 +294,8 @@ export const featuredProjects: Project[] = [
 },
 
 {
-  id: 14,
-  title: "MiniLM Semantic Retrieval",
+    id: 15,
+    title: "MiniLM Semantic Retrieval",
   badges: ["Python", "NLP", "MiniLM", "Semantic Search", "Sentence Embeddings", "Information Retrieval"],
   description: "Fine-tuned MiniLM for semantic retrieval on 6,000+ book titles and descriptions using Multiple Negatives Ranking Loss. Optimized embeddings placed relevant book-query pairs closer in semantic space, evaluated via Mean Reciprocal Rank and Top-K accuracy. Optimal settings (10 epochs, weight decay 0.01, test size 0.3) achieved MRR 0.9676 and Top-1 0.9451, enabling accurate, context-aware book recommendations.",
   cover: "/projects/ieee/bbst2.PNG",
@@ -281,8 +308,8 @@ export const featuredProjects: Project[] = [
 },
 
 {
-  id: 15,
-  title: "Automated MiniLM Optimization",
+    id: 16,
+    title: "Automated MiniLM Optimization",
   badges: ["Python", "NLP", "MiniLM", "Semantic Retrieval", "Hyperparameter Tuning", "Grid Search", "Random Search"],
   description: "Performed systematic hyperparameter tuning for MiniLM on semantic retrieval tasks. Explored epochs, weight decay, learning rate, batch size, warmup steps, shuffle, and mixed-precision using Grid and Random Search. Optimal configuration (10 epochs, weight decay 0.01, learning rate 3e-5, batch size 4, 500 warmup steps) produced MRR 0.9928, Top-1 0.9878, Top-3/Top-5 1.0, demonstrating highly effective embeddings for accurate, contextual book recommendations.",
   cover: "/projects/ieee/search2.PNG",

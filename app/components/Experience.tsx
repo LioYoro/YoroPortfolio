@@ -2,6 +2,37 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import AnimatedSection from "./AnimatedSection";
+
+const certificates = [
+  {
+    id: 1,
+    title: "CompTIA ITF+",
+    issuer: "CompTIA",
+    date: "December 16, 2022",
+    description: "Provides a solid introduction to key IT concepts such as computers, software, networking, and security. Ideal for beginners or those shifting into the tech field.",
+    image: "/assets/certificates/comptia.png",
+    pdf: "/comptia.pdf",
+  },
+  {
+    id: 2,
+    title: "Pearson Database Certification",
+    issuer: "Pearson",
+    date: "May 15, 2024",
+    description: "Validates foundational knowledge in database concepts, including data management, SQL basics, and database design principles.",
+    image: "/assets/certificates/database.png",
+    pdf: "/databasecert.pdf",
+  },
+  {
+    id: 3,
+    title: "AI for Industry",
+    issuer: "AI Singapore",
+    date: "May 20, 2025",
+    description: "Demonstrates foundational knowledge in artificial intelligence, including machine learning concepts, data-driven problem solving, and real-world AI applications.",
+    image: "/assets/certificates/aisingapore.png",
+    pdf: "/yoroAiSingapore.pdf",
+  },
+];
 
 export default function Experience(): React.JSX.Element {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -23,33 +54,24 @@ export default function Experience(): React.JSX.Element {
       id: 2,
       title: "CERTIFICATIONS",
       content: (
-        <div className="space-y-4">
-          <div>
-            <h4 className="font-semibold">CompTIA ITF+ (Information Technology Fundamentals) — Certified Candidate</h4>
-            <p className="text-sm text-white/70">December 16, 2022</p>
-            <p className="text-sm text-white/80 mt-2">
-              This certification provides a solid introduction to key IT concepts such as computers, software, networking, and security. It’s ideal for beginners or those shifting into the tech field, helping them build essential technical skills. It also serves as a stepping stone toward more advanced certifications and IT roles.
-            </p>
-            <a href="/comptia.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm block mt-2">View certificate (PDF)</a>
-          </div>
-          <div>
-            <h4 className="font-semibold">Pearson Database Certification — Exam Passer</h4>
-            <p className="text-sm text-white/70">May 15, 2024</p>
-            <p className="text-sm text-white/80 mt-2">
-              A certification that validates foundational knowledge in database concepts, including data management, SQL basics, and database design principles. Demonstrates the ability to understand and work with core database structures, preparing learners for more advanced data or IT-related roles.
-            </p>
-            <a href="/databasecert.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm block mt-2">View certificate (PDF)</a>
-          </div>
-          <div>
-            <h4 className="font-semibold">AI Singapore — AI for Industry Certification</h4>
-            <p className="text-sm text-white/70">May 20, 2025</p>
-            <p className="text-sm text-white/80 mt-2">
-              Issued by AI Singapore, this certification demonstrates foundational knowledge in artificial intelligence, including machine learning concepts, data-driven problem solving, and real-world AI applications. The program emphasizes practical industry use-cases and responsible AI adoption, preparing learners to integrate AI solutions into business and technical environments.
-            </p>
-            <a href="/yoroAiSingapore.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-400 text-sm block mt-2">
-              View certificate (PDF)
-            </a>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {certificates.map((cert) => (
+            <div key={cert.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-12 h-12 relative flex-shrink-0">
+                  <Image src={cert.image} alt={cert.title} fill className="object-contain" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-sm">{cert.title}</h4>
+                  <p className="text-xs text-white/60">{cert.issuer} • {cert.date}</p>
+                </div>
+              </div>
+              <p className="text-xs text-white/70 mb-3">{cert.description}</p>
+              <a href={cert.pdf} target="_blank" rel="noopener noreferrer" className="text-blue-400 text-xs hover:text-blue-300 transition-colors">
+                View Certificate →
+              </a>
+            </div>
+          ))}
         </div>
       ),
       icon: "/cards/card-2.png",
@@ -59,7 +81,9 @@ export default function Experience(): React.JSX.Element {
   return (
     <section id="experience" className="py-16 px-6">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 text-center">Experiences</h2>
+        <AnimatedSection>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 text-center">Experiences</h2>
+        </AnimatedSection>
 
         <div className="space-y-4">
           {items.map((item, idx) => {

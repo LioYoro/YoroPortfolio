@@ -13,6 +13,22 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import AnimatedSection from "./AnimatedSection"
+
+const filters = [
+  { id: "all", label: "All" },
+  { id: "ai-ml", label: "AI/ML" },
+  { id: "fullstack", label: "Full-Stack" },
+  { id: "nlp", label: "NLP" },
+  { id: "webdev", label: "Web Dev" },
+]
+
+const filterMap: Record<string, string[]> = {
+  "ai-ml": ["Machine Learning", "kNN", "Linear Regression", "Logistic Regression", "MLP", "Ensemble", "Boosting", "BERT", "MiniLM", "NLP", "Gradient Boosting"],
+  "fullstack": ["Full-Stack", "React.js", "Laravel", "PHP", "VPS"],
+  "nlp": ["NLP", "BERT", "MiniLM", "Text Preprocessing", "Text Representation", "Text Cleaning", "Tokenization", "TF-IDF", "Sentiment Analysis", "POS Tagging", "Question Answering", "Semantic Search"],
+  "webdev": ["Laravel", "PHP", "E-Commerce", "MySQL", "Database Management"],
+}
 
 /* ---------- GitHub Buttons ---------- */
 
@@ -119,22 +135,52 @@ function FilesTextButton({ files }: { files: { name: string; path: string }[] })
 
 export default function Projects(): React.JSX.Element {
   const [active, setActive] = useState<Project | null>(null)
+  const [activeFilter, setActiveFilter] = useState("all")
+
+  const filteredProjects = activeFilter === "all"
+    ? featuredProjects
+    : featuredProjects.filter(project => {
+        const keywords = filterMap[activeFilter] || []
+        return project.badges.some(badge => keywords.includes(badge))
+      })
 
   return (
     <section id="lab" className="py-20 px-6">
-      <h2 className="text-4xl font-bold text-white mb-10 text-center">
-        Projects
-      </h2>
+      <AnimatedSection>
+        <h2 className="text-4xl font-bold text-white mb-6 text-center">
+          Projects
+        </h2>
+      </AnimatedSection>
+
+      <AnimatedSection delay={100}>
+        <div className="container mx-auto max-w-7xl mb-8">
+          <div className="flex flex-wrap justify-center gap-2">
+            {filters.map((filter) => (
+              <button
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+                  activeFilter === filter.id
+                    ? "bg-purple-600 text-white"
+                    : "bg-white/10 text-white/70 hover:bg-white/20"
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </AnimatedSection>
 
       <div className="container mx-auto max-w-7xl grid gap-10 md:grid-cols-2 lg:grid-cols-3">
 
-        {featuredProjects.map((project) => (
-          <Card
-            key={project.id}
-            onClick={() => setActive(project)}
-            className="cursor-pointer overflow-hidden bg-zinc-900 border border-zinc-800 hover:-translate-y-1 hover:shadow-xl transition"
-          >
-            <div className="relative w-full h-60">
+        {filteredProjects.map((project, index) => (
+          <AnimatedSection key={project.id} delay={index * 100}>
+            <Card
+              onClick={() => setActive(project)}
+              className="cursor-pointer overflow-hidden bg-zinc-900 border border-zinc-800 hover:-translate-y-1 hover:shadow-xl transition"
+            >
+              <div className="relative w-full h-60">
               <Image src={project.cover} alt={project.title} fill className="object-cover" />
             </div>
 
@@ -166,7 +212,8 @@ export default function Projects(): React.JSX.Element {
                 </div>
               )}
             </CardContent>
-          </Card>
+            </Card>
+          </AnimatedSection>
         ))}
 
       </div>

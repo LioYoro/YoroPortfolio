@@ -1,44 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
+import AnimatedSection from "./AnimatedSection";
 
 export default function Footer(): React.JSX.Element {
   return (
     <footer id="contact" className="py-10  px-6 border-t border-white/10">
       <div className="container mx-auto max-w-6xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Contact
-          </h2>
-          <p className="text-md text-white/80 max-w-2xl mx-auto mb-8">
-            I&apos;m currently looking to join a cross-functional team that values 
-            improving people&apos;s lives through accessible design, or have a project 
-            in mind? Let&apos;s connect.
-          </p>
-          <a
-            href="mailto:yoroleo10@gmail.com"
-            className="text-md text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            yoroleo10@gmail.com
-          </a>
-        </div>
+        <AnimatedSection>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Contact
+            </h2>
+            <p className="text-md text-white/80 max-w-2xl mx-auto mb-6">
+              I&apos;m currently looking to join a cross-functional team that values 
+              improving people&apos;s lives through accessible design, or have a project 
+              in mind? Let&apos;s connect.
+            </p>
+            <a
+              href="mailto:yoroleo10@gmail.com"
+              className="text-md text-blue-400 hover:text-blue-300 transition-colors block mb-4"
+            >
+              yoroleo10@gmail.com
+            </a>
+            <a
+              href="/YORO, LEONARDO ANTERO - BSIT  - RESUME.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Resume
+            </a>
+          </div>
+        </AnimatedSection>
 
         {/* Social Media Icons */}
-        <div className="flex justify-center gap-6 mt-12">
-          <Link
-            href="https://www.instagram.com/ibii.memon/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-blue-500/30 hover:border-blue-500/50 transition-all"
-            aria-label="Instagram"
-          >
-            <Image
-              src="/assets/insta.webp"
-              alt="Instagram"
-              width={20}
-              height={20}
-              className="w-5 h-5"
-            />
-          </Link>
+        <AnimatedSection delay={200}>
+          <div className="flex justify-center gap-6 mt-12">
           <Link
             href="https://github.com/LioYoro"
             target="_blank"
@@ -70,6 +70,7 @@ export default function Footer(): React.JSX.Element {
             </svg>
           </Link>
         </div>
+        </AnimatedSection>
 
         <div className="text-center mt-12 pt-8 border-t border-white/10">
           <p className="text-white/60 text-sm">
