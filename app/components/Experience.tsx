@@ -32,6 +32,15 @@ const certificates = [
     image: "/assets/certificates/aisingapore.png",
     pdf: "/yoroAiSingapore.pdf",
   },
+  {
+    id: 4,
+    title: "Wadhwani Employability Skills",
+    issuer: "Wadhwani Foundation",
+    date: "May 1, 2026",
+    description: "Comprehensive training bridging technical knowledge and workplace readiness across 15 key competencies including communication, professionalism, customer centricity, problem-solving, adaptability, teamwork, innovation, and financial literacy. Completed JobReady and JobRise courses with scenario-based simulations and AI-powered learning.",
+    image: "/assets/certificates/wadhwani.png",
+    pdf: "/wadhwani.pdf",
+  },
 ];
 
 export default function Experience(): React.JSX.Element {
