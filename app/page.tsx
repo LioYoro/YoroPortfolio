@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 
 export default function Home(): React.JSX.Element {
   return (
-    <main className="min-h-screen bg-indigo-950 text-white">
+    <main className="min-h-screen bg-section text-foreground">
       <Header />
       <Banner />
       <Skills />

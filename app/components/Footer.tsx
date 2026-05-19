@@ -4,14 +4,14 @@ import AnimatedSection from "./AnimatedSection";
 
 export default function Footer(): React.JSX.Element {
   return (
-    <footer id="contact" className="py-10  px-6 border-t border-white/10">
+    <footer id="contact" className="py-10  px-6 border-t border-border-light">
       <div className="container mx-auto max-w-6xl">
         <AnimatedSection>
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Contact
             </h2>
-            <p className="text-md text-white/80 max-w-2xl mx-auto mb-6">
+            <p className="text-md text-text-secondary max-w-2xl mx-auto mb-6">
               I&apos;m currently looking to join a cross-functional team that values 
               improving people&apos;s lives through accessible design, or have a project 
               in mind? Let&apos;s connect.
@@ -26,7 +26,7 @@ export default function Footer(): React.JSX.Element {
               href="/YORO, LEONARDO ANTERO - BSIT  - RESUME.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/70 hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-text-muted hover:text-foreground transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -43,11 +43,11 @@ export default function Footer(): React.JSX.Element {
             href="https://github.com/LioYoro"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-subtle hover:bg-subtle-hover border border-purple-500/30 hover:border-purple-500/50 transition-all"
             aria-label="GitHub"
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-foreground"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -58,11 +58,11 @@ export default function Footer(): React.JSX.Element {
             href="https://www.linkedin.com/in/leonardo-antero-yoro-391475393/"
             target="_blank"
             rel="noopener noreferrer"
-            className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/50 transition-all"
+            className="w-10 h-10 flex items-center justify-center rounded-full bg-subtle hover:bg-subtle-hover border border-purple-500/30 hover:border-purple-500/50 transition-all"
             aria-label="LinkedIn"
           >
             <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-foreground"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -72,8 +72,8 @@ export default function Footer(): React.JSX.Element {
         </div>
         </AnimatedSection>
 
-        <div className="text-center mt-12 pt-8 border-t border-white/10">
-          <p className="text-white/60 text-sm">
+        <div className="text-center mt-12 pt-8 border-t border-border-light">
+          <p className="text-text-muted text-sm">
             © {new Date().getFullYear()} Leonardo Antero Yoro. All rights reserved.
           </p>
         </div>

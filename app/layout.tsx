@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "./components/ThemeProvider";
 
 import "./globals.css";
 
@@ -65,16 +66,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="canonical" href="https://yoro-portfolio.vercel.app" />
-        {/* Favicon — replace /favicon.ico with your file in /public */}
         <link rel="icon" href="/logo/TabIcon.svg" />
       </head>
       <body
-        className={`${poppins.variable} font-sans antialiased bg-blue-900 text-white`}
+        className={`${poppins.variable} font-sans antialiased bg-background text-foreground`}
       >
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

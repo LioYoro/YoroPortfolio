@@ -52,9 +52,9 @@ export default function Experience(): React.JSX.Element {
       title: "EDUCATION",
       content: (
         <div>
-          <h4 className="font-semibold">Bachelor of Science in Information Technology</h4>
-          <p className="text-sm text-white/80">José Rizal University</p>
-          <p className="text-sm text-white/70 mt-2">2022 - Present</p>
+          <h4 className="font-semibold text-foreground">Bachelor of Science in Information Technology</h4>
+          <p className="text-sm text-text-secondary">José Rizal University</p>
+          <p className="text-sm text-text-muted mt-2">2022 - Present</p>
         </div>
       ),
       icon: "/logo/Jose_Rizal_University_seal.svg.png",
@@ -65,17 +65,17 @@ export default function Experience(): React.JSX.Element {
       content: (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {certificates.map((cert) => (
-            <div key={cert.id} className="bg-white/5 rounded-lg p-4 border border-white/10">
+            <div key={cert.id} className="bg-subtle rounded-lg p-4 border border-border-light">
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-12 h-12 relative flex-shrink-0">
                   <Image src={cert.image} alt={cert.title} fill className="object-contain" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm">{cert.title}</h4>
-                  <p className="text-xs text-white/60">{cert.issuer} • {cert.date}</p>
+                  <h4 className="font-semibold text-sm text-foreground">{cert.title}</h4>
+                  <p className="text-xs text-text-muted">{cert.issuer} • {cert.date}</p>
                 </div>
               </div>
-              <p className="text-xs text-white/70 mb-3">{cert.description}</p>
+              <p className="text-xs text-text-secondary mb-3">{cert.description}</p>
               <a href={cert.pdf} target="_blank" rel="noopener noreferrer" className="text-blue-400 text-xs hover:text-blue-300 transition-colors">
                 View Certificate →
               </a>
@@ -91,29 +91,29 @@ export default function Experience(): React.JSX.Element {
     <section id="experience" className="py-16 px-6">
       <div className="container mx-auto max-w-6xl">
         <AnimatedSection>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 text-center">Experiences</h2>
+          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-8 text-center">Experiences</h2>
         </AnimatedSection>
 
         <div className="space-y-4">
           {items.map((item, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div key={item.id} className="bg-linear-to-r from-slate-950 via-blue-950 to-slate-950 backdrop-blur-sm rounded-xl p-4 border-t-3 border-blue-700">
+              <div key={item.id} className="bg-accordion backdrop-blur-sm rounded-xl p-4 border-t-3 border-blue-700">
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
                   className="w-full flex items-center justify-between gap-4"
                 >
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 flex items-center justify-center bg-white/5 rounded-lg">
+                    <div className="w-14 h-14 flex items-center justify-center bg-subtle rounded-lg">
                       <Image src={item.icon} alt={item.title} width={48} height={48} className="object-contain" />
                     </div>
-                    <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                    <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
                   </div>
-                  <div className="text-white/60">{isOpen ? "−" : "+"}</div>
+                  <div className="text-text-muted">{isOpen ? "−" : "+"}</div>
                 </button>
 
-                <div className={`mt-4 text-white/80 transition-max-height duration-300 overflow-hidden ${isOpen ? "max-h-[1000px]" : "max-h-0"}`}>
+                <div className={`mt-4 text-text-secondary transition-max-height duration-300 overflow-hidden ${isOpen ? "max-h-[1000px]" : "max-h-0"}`}>
                   {item.content}
                 </div>
               </div>

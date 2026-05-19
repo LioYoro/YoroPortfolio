@@ -66,12 +66,12 @@ export default function Banner(): React.JSX.Element {
             </div>
             <div className="flex-1 space-y-6 text-center lg:text-left lg:pl-16">
               <div>
-                <p className="text-2xl">BSIT | Full-stack & AI</p>
-                <h1 className="text-4xl lg:text-5xl tracking-tight font-semibold text-white leading-tight">
+                <p className="text-2xl text-foreground">BSIT | Full-stack & AI</p>
+                <h1 className="text-4xl lg:text-5xl tracking-tight font-semibold text-foreground leading-tight">
                   Building backend systems, integrating AI,
                   <br /> and delivering practical solutions.
                 </h1>
-                <p className="text-md text-white/80">
+                <p className="text-md text-text-secondary">
                   Dedicated BSIT student and developer focused on backend development, databases, and AI integrations.
                 </p>
               </div>
@@ -80,15 +80,15 @@ export default function Banner(): React.JSX.Element {
         </AnimatedSection>
         <AnimatedSection delay={200}>
           <div className="space-y-3 pt-15 text-center lg:text-left">
-            <p className="text-4xl text-white font-bold">
+            <p className="text-4xl text-foreground font-bold">
               I&apos;m a {displayedText}
               <span className="animate-pulse">|</span>
             </p>
-            <p className="text-lg lg:text-xl text-white/90 tracking-wide flex flex-wrap items-center justify-center lg:justify-start gap-2">
+            <p className="text-lg lg:text-xl text-text-secondary tracking-wide flex flex-wrap items-center justify-center lg:justify-start gap-2">
               <span>Open to OJT and collaboration —</span>
               <a href="https://github.com/LioYoro" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">GitHub</a>
-              <span className="text-white/70">•</span>
-              <a href="mailto:yoroleo10@gmail.com" className="text-white/70">yoroleo10@gmail.com</a>
+              <span className="text-text-muted">•</span>
+              <a href="mailto:yoroleo10@gmail.com" className="text-text-muted">yoroleo10@gmail.com</a>
             </p>
             <div className="pt-4">
               <a

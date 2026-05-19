@@ -13,6 +13,38 @@ export interface Project {
 export const featuredProjects: Project[] = [
   {
     id: 1,
+    title: "AI Document Workflow Automation Platform",
+    badges: [
+      "Full-Stack",
+      "AI",
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "OpenAI GPT-4o-mini",
+      "OCR",
+      "Tesseract",
+      "Semantic Search",
+      "pgvector",
+      "Docker",
+      "Supabase",
+      "MiniLM",
+    ],
+    description: "AI Document Workflow Automation Platform is a full-stack AI-powered document processing system that ingests scanned documents and PDFs, extracts text via dual-engine OCR, classifies and extracts structured fields using LLMs, stores data in a searchable database, and provides semantic search capabilities. The system is designed for real-world operational problems such as barangay documents, invoices, and HR resumes.\n\nI developed both backend and frontend architecture, building a FastAPI + SQLAlchemy backend with Supabase PostgreSQL for data persistence and Supabase Auth with RLS policies for security. The frontend is built with React + Vite + TypeScript and Tailwind CSS with Shadcn-style components, featuring dark theme glassmorphism design and loading skeletons.\n\nThe OCR pipeline uses Tesseract for image processing and PyMuPDF for PDFs, automatically detecting file types and routing to the correct engine. After text extraction, OpenAI GPT-4o-mini handles document classification and structured field extraction with per-field confidence scoring, enabling accurate data capture from varied document formats.\n\nFor search, I implemented a semantic search system using MiniLM embeddings (384-dim) stored in pgvector within Supabase PostgreSQL, performing cosine similarity searches with filename boosting. Background processing is handled via ARQ workers with Redis (Upstash) and automatic sync fallback for reliability.\n\nThe system includes a full admin dashboard with role-based access control, audit logging, and Recharts analytics. The platform is fully deployed with Docker, Vercel (frontend), Render (backend), and Supabase (database), demonstrating clean layered architecture with proper API → Services → Workers separation.",
+    cover: "/projects/ai-doc-workflow/1.png",
+    images: [
+      "/projects/ai-doc-workflow/1.png",
+      "/projects/ai-doc-workflow/2.png",
+      "/projects/ai-doc-workflow/3.png",
+      "/projects/ai-doc-workflow/4.png",
+      "/projects/ai-doc-workflow/5.png",
+      "/projects/ai-doc-workflow/6.png",
+    ],
+    github: "https://github.com/LioYoro/lio-ai-project",
+  },
+
+  {
+    id: 2,
     title: "Academic Resource & Knowledge (ARK)",
     badges: [
       "AI",
@@ -47,7 +79,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 2,
+    id: 3,
     title: "SYNOPSIS",
     badges: [
       "React.js",
@@ -74,7 +106,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Waste2Wealth",
     badges: [
       "PHP",
@@ -95,7 +127,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "JRU Online Clinic Appointment System",
     badges: [
       "PHP",
@@ -132,7 +164,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Sustainalyze",
     badges: [
       "Machine Learning",
@@ -168,7 +200,7 @@ export const featuredProjects: Project[] = [
   /* ------------------ ML/IEEE Projects ------------------ */
   
   {
-    id: 6,
+    id: 7,
     title: "K-Nearest Neighbors (Iris Classification)",
     badges: ["Machine Learning", "kNN", "Classification", "Python", "Data Analysis"],
     description: "Applied K-Nearest Neighbors to classify Iris flower species, analyzing how neighbor size affects bias–variance tradeoff. Validated with metrics and visualizations, highlighting the importance of parameter tuning and data quality.",
@@ -182,7 +214,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Linear Regression (NBA Analytics)",
     badges: ["Machine Learning", "Linear Regression", "Python", "Sports Analytics"],
     description: "Used regression to predict NBA players’ field goal attempts from performance metrics, emphasizing feature selection. Points scored alone provided high predictive power (R² = 0.969), while multiple features slightly improved accuracy.",
@@ -195,7 +227,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "Logistic Regression & Decision Tree",
     badges: ["Machine Learning", "Multinomial Logistic Regression", "Decision Tree"],
     description: "Compared Logistic Regression and Decision Tree for multinomial classification. Decision Tree gave higher peak accuracy but more variability; Logistic Regression was stable. Highlights strategic hyperparameter tuning and model selection for balanced predictive power.",
@@ -210,7 +242,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 9,
+    id: 10,
     title: "Multilayer Perceptron (Diabetes Prediction)",
     badges: ["Machine Learning", "Neural Network", "MLP", "Python", "Healthcare Analytics"],
     description: "Neural network for diabetes prediction using health attributes. Tuned hidden layers, solver, learning rate, and batch size. Adam solver outperformed others; careful complexity control improved generalization.",
@@ -224,7 +256,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: "Course Project – Ensemble & Boosting",
     badges: ["Machine Learning", "Ensemble", "Boosting", "Bagging", "MLP", "Diabetes Prediction", "Python"],
     description: "Compared traditional models (LR, DT, SVM) with ensemble methods for diabetes detection. Boosting achieved highest predictive performance, bagging improved stability. Highlights ensemble techniques for robust healthcare ML applications.",
@@ -237,8 +269,8 @@ export const featuredProjects: Project[] = [
     ]
   },
 
-{
-    id: 11,
+  {
+    id: 12,
     title: "NLP Text Preprocessing",
   badges: ["Python", "NLP", "Text Cleaning", "Data Preprocessing", "Pandas", "Tokenization", "Stopword Removal", "Lemmatization"],
   description: "Applied text preprocessing techniques on a labeled Twitter dataset for hate speech and offensive language detection. Steps included lowercasing, contraction expansion, removal of usernames, URLs, numbers, special characters, stopwords, and repeated-character normalization. Preprocessing reduced the dataset from 349,862 to 199,158 words, improving semantic clarity for NLP analysis.",
@@ -251,8 +283,8 @@ export const featuredProjects: Project[] = [
     ]
 },
 
-{
-    id: 12,
+  {
+    id: 13,
     title: "NLP Text Representation",
   badges: ["Python", "NLP", "One-Hot Encoding", "Bag of Words", "TF-IDF", "Text Representation"],
   description: "Introduced core NLP text representation methods including dictionary lookup, one-hot encoding, Bag of Words, and TF-IDF, converting raw text into numerical formats suitable for models. TF-IDF improved relevance weighting across corpora. Implemented in Python using scikit-learn, emphasizing understanding each representation method for downstream tasks like classification, clustering, and language modeling.",
@@ -265,8 +297,8 @@ export const featuredProjects: Project[] = [
     ]
 },
 
-{
-    id: 13,
+  {
+    id: 14,
     title: "NLP Functions",
   badges: ["Python", "NLP", "Text Classification", "Sentiment Analysis", "POS Tagging", "Text Summarization"],
   description: "Developed NLP models for sports journalism: text classification, sentiment analysis, part-of-speech tagging, and text summarization. Preprocessed and manually annotated datasets enabled evaluation against high-performance benchmarks: classification 92%, sentiment 88%, POS tagging 84.6%, summarization ROUGE-1 F1 88.8%. Highlights the importance of preprocessing, dataset annotation, and evaluation for effective NLP pipelines.",
@@ -279,8 +311,8 @@ export const featuredProjects: Project[] = [
     ]
 },
 
-{
-    id: 14,
+  {
+    id: 15,
     title: "BERT Question Answering",
   badges: ["Python", "NLP", "BERT", "DistilBERT", "RoBERTa", "Question Answering", "Pretrained Models"],
   description: "Evaluated pretrained question-answering models (BERT, DistilBERT, BERT-Large, RoBERTa) on contextual questions from local news articles. Metrics included Exact Match, F1 score, confidence, and inference time. DistilBERT achieved the best balance of accuracy and speed; RoBERTa had comparable accuracy with slightly slower inference; BERT-Large had lower scores and longest inference. Emphasizes impact of model architecture, pre-training, and fine-tuning in extractive QA.",
@@ -293,8 +325,8 @@ export const featuredProjects: Project[] = [
     ]
 },
 
-{
-    id: 15,
+  {
+    id: 16,
     title: "MiniLM Semantic Retrieval",
   badges: ["Python", "NLP", "MiniLM", "Semantic Search", "Sentence Embeddings", "Information Retrieval"],
   description: "Fine-tuned MiniLM for semantic retrieval on 6,000+ book titles and descriptions using Multiple Negatives Ranking Loss. Optimized embeddings placed relevant book-query pairs closer in semantic space, evaluated via Mean Reciprocal Rank and Top-K accuracy. Optimal settings (10 epochs, weight decay 0.01, test size 0.3) achieved MRR 0.9676 and Top-1 0.9451, enabling accurate, context-aware book recommendations.",
@@ -307,8 +339,8 @@ export const featuredProjects: Project[] = [
     ]
 },
 
-{
-    id: 16,
+  {
+    id: 17,
     title: "Automated MiniLM Optimization",
   badges: ["Python", "NLP", "MiniLM", "Semantic Retrieval", "Hyperparameter Tuning", "Grid Search", "Random Search"],
   description: "Performed systematic hyperparameter tuning for MiniLM on semantic retrieval tasks. Explored epochs, weight decay, learning rate, batch size, warmup steps, shuffle, and mixed-precision using Grid and Random Search. Optimal configuration (10 epochs, weight decay 0.01, learning rate 3e-5, batch size 4, 500 warmup steps) produced MRR 0.9928, Top-1 0.9878, Top-3/Top-5 1.0, demonstrating highly effective embeddings for accurate, contextual book recommendations.",

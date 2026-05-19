@@ -24,10 +24,10 @@ const filters = [
 ]
 
 const filterMap: Record<string, string[]> = {
-  "ai-ml": ["Machine Learning", "kNN", "Linear Regression", "Logistic Regression", "MLP", "Ensemble", "Boosting", "BERT", "MiniLM", "NLP", "Gradient Boosting"],
-  "fullstack": ["Full-Stack", "React.js", "Laravel", "PHP", "VPS"],
-  "nlp": ["NLP", "BERT", "MiniLM", "Text Preprocessing", "Text Representation", "Text Cleaning", "Tokenization", "TF-IDF", "Sentiment Analysis", "POS Tagging", "Question Answering", "Semantic Search"],
-  "webdev": ["Laravel", "PHP", "E-Commerce", "MySQL", "Database Management"],
+  "ai-ml": ["Machine Learning", "kNN", "Linear Regression", "Logistic Regression", "MLP", "Ensemble", "Boosting", "BERT", "MiniLM", "NLP", "Gradient Boosting", "OpenAI GPT-4o-mini", "OpenAI", "LLM", "RAG"],
+  "fullstack": ["Full-Stack", "React.js", "React", "TypeScript", "FastAPI", "Laravel", "PHP", "VPS", "PostgreSQL", "Docker"],
+  "nlp": ["NLP", "BERT", "MiniLM", "Text Preprocessing", "Text Representation", "Text Cleaning", "Tokenization", "TF-IDF", "Sentiment Analysis", "POS Tagging", "Question Answering", "Semantic Search", "LLM", "RAG", "OpenAI"],
+  "webdev": ["FastAPI", "React", "React.js", "Laravel", "PHP", "E-Commerce", "MySQL", "Database Management", "Full-Stack", "PostgreSQL", "TypeScript", "Tailwind"],
 }
 
 /* ---------- GitHub Buttons ---------- */
@@ -39,11 +39,11 @@ function GithubIconButton({ url }: { url: string }) {
       target="_blank"
       rel="noopener noreferrer"
       onClick={(e) => e.stopPropagation()}
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/60 transition"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-subtle hover:bg-subtle-hover border border-purple-500/30 hover:border-purple-500/60 transition"
       aria-label="GitHub Repository"
     >
       <svg
-              className="w-5 h-5 text-white"
+              className="w-5 h-5 text-foreground"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -59,11 +59,11 @@ function GithubTextButton({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-white/10 hover:bg-white/20 border border-purple-500/30 hover:border-purple-500/60 transition text-sm"
+      className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-subtle hover:bg-subtle-hover border border-purple-500/30 hover:border-purple-500/60 transition text-sm"
       aria-label="View Repository"
     >
       <svg
-              className="w-5 h-5 text-white flex-shrink-0"
+              className="w-5 h-5 text-foreground flex-shrink-0"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
@@ -86,12 +86,12 @@ function FilesIconButton({ files }: { files: { name: string; path: string }[] })
           target="_blank"
           rel="noopener noreferrer"
           onClick={(e) => e.stopPropagation()}
-          className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-blue-500/30 hover:border-blue-500/60 transition"
+          className="w-10 h-10 flex items-center justify-center rounded-full bg-subtle hover:bg-subtle-hover border border-blue-500/30 hover:border-blue-500/60 transition"
           aria-label={`View ${file.name}`}
           title={file.name}
         >
           <svg
-            className="w-5 h-5 text-white"
+            className="w-5 h-5 text-foreground"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -113,11 +113,11 @@ function FilesTextButton({ files }: { files: { name: string; path: string }[] })
           href={file.path}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-white/10 hover:bg-white/20 border border-blue-500/30 hover:border-blue-500/60 transition text-sm"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2 h-10 rounded-lg bg-subtle hover:bg-subtle-hover border border-blue-500/30 hover:border-blue-500/60 transition text-sm"
           aria-label={`View ${file.name}`}
         >
           <svg
-            className="w-5 h-5 text-white flex-shrink-0"
+            className="w-5 h-5 text-foreground flex-shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -147,7 +147,7 @@ export default function Projects(): React.JSX.Element {
   return (
     <section id="lab" className="py-20 px-6">
       <AnimatedSection>
-        <h2 className="text-4xl font-bold text-white mb-6 text-center">
+        <h2 className="text-4xl font-bold text-foreground mb-6 text-center">
           Projects
         </h2>
       </AnimatedSection>
@@ -162,7 +162,7 @@ export default function Projects(): React.JSX.Element {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                   activeFilter === filter.id
                     ? "bg-purple-600 text-white"
-                    : "bg-white/10 text-white/70 hover:bg-white/20"
+                    : "bg-subtle text-text-muted hover:bg-subtle-hover"
                 }`}
               >
                 {filter.label}
@@ -178,23 +178,23 @@ export default function Projects(): React.JSX.Element {
           <AnimatedSection key={project.id} delay={index * 100}>
             <Card
               onClick={() => setActive(project)}
-              className="cursor-pointer overflow-hidden bg-zinc-900 border border-zinc-800 hover:-translate-y-1 hover:shadow-xl transition"
+              className="cursor-pointer overflow-hidden bg-card-bg border border-card-border hover:-translate-y-1 hover:shadow-xl transition"
             >
               <div className="relative w-full h-60">
               <Image src={project.cover} alt={project.title} fill className="object-cover" />
             </div>
 
-            <CardContent className="p-4 space-y-3 text-white">
+            <CardContent className="p-4 space-y-3 text-foreground">
               <h3 className="text-lg font-bold">{project.title}</h3>
 
-              <p className="text-sm text-white/70 line-clamp-3">
+              <p className="text-sm text-text-secondary line-clamp-3">
                 {project.description}
               </p>
 
               {/* badges */}
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.badges.map((b, i) => (
-                  <Badge key={i} className="bg-transparent border border-zinc-500">
+                    <Badge key={i} className="bg-transparent border border-card-border text-foreground">
                     {b}
                   </Badge>
                 ))}
@@ -222,26 +222,26 @@ export default function Projects(): React.JSX.Element {
 
       {active && (
         <div
-          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-modal-overlay z-50 flex items-center justify-center p-4"
           onClick={() => setActive(null)}
         >
           <div
-            className="bg-zinc-900 w-full max-w-3xl max-h-[85vh] rounded-xl border border-zinc-700 overflow-hidden flex flex-col"
+            className="bg-card-bg w-full max-w-3xl max-h-[85vh] rounded-xl border border-card-border overflow-hidden flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="overflow-y-auto">
 
               {/* header */}
-              <div className="p-5 border-b border-zinc-700 text-white max-h-[50vh] overflow-y-auto">
+              <div className="p-5 border-b border-card-border text-foreground max-h-[50vh] overflow-y-auto">
                 <h2 className="text-2xl font-bold">{active.title}</h2>
 
-                <p className="text-white/70 mt-2 text-sm">
+                <p className="text-text-secondary mt-2 text-sm">
                   {active.description}
                 </p>
 
                 <div className="flex flex-wrap gap-2 mt-3">
                   {active.badges.map((b, i) => (
-                    <Badge key={i} className="bg-transparent border border-zinc-500">
+                  <Badge key={i} className="bg-transparent border border-card-border text-foreground">
                       {b}
                     </Badge>
                   ))}
@@ -293,8 +293,8 @@ export default function Projects(): React.JSX.Element {
                         className="
                           absolute left-3 top-1/2 -translate-y-1/2
                           h-12 w-12
-                          bg-black/60 hover:bg-black/80
-                          border border-white/20
+                          bg-subtle hover:bg-subtle-hover
+                          border border-border-light
                           z-10
                         "
                       />
@@ -302,8 +302,8 @@ export default function Projects(): React.JSX.Element {
                         className="
                           absolute right-3 top-1/2 -translate-y-1/2
                           h-12 w-12
-                          bg-black/60 hover:bg-black/80
-                          border border-white/20
+                          bg-subtle hover:bg-subtle-hover
+                          border border-border-light
                           z-10
                         "
                       />
