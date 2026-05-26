@@ -21,6 +21,7 @@ const filters = [
   { id: "fullstack", label: "Full-Stack" },
   { id: "nlp", label: "NLP" },
   { id: "webdev", label: "Web Dev" },
+  { id: "automation", label: "Automation" },
 ]
 
 const filterMap: Record<string, string[]> = {
@@ -28,6 +29,7 @@ const filterMap: Record<string, string[]> = {
   "fullstack": ["Full-Stack", "React.js", "React", "TypeScript", "FastAPI", "Laravel", "PHP", "VPS", "PostgreSQL", "Docker"],
   "nlp": ["NLP", "BERT", "MiniLM", "Text Preprocessing", "Text Representation", "Text Cleaning", "Tokenization", "TF-IDF", "Sentiment Analysis", "POS Tagging", "Question Answering", "Semantic Search", "LLM", "RAG", "OpenAI"],
   "webdev": ["FastAPI", "React", "React.js", "Laravel", "PHP", "E-Commerce", "MySQL", "Database Management", "Full-Stack", "PostgreSQL", "TypeScript", "Tailwind"],
+  "automation": ["n8n", "Docker", "Workflow Automation", "Webhooks", "Low-Code", "Google Sheets API", "ngrok"],
 }
 
 /* ---------- GitHub Buttons ---------- */
@@ -77,9 +79,12 @@ function GithubTextButton({ url }: { url: string }) {
 /* ---------- Files Button ---------- */
 
 function FilesIconButton({ files }: { files: { name: string; path: string }[] }) {
+  const maxVisible = 3
+  const visible = files.slice(0, maxVisible)
+  const extra = files.length - maxVisible
   return (
-    <div className="flex flex-wrap gap-2">
-      {files.map((file, idx) => (
+    <div className="flex flex-wrap items-center gap-2">
+      {visible.map((file, idx) => (
         <a
           key={idx}
           href={file.path}
@@ -100,6 +105,11 @@ function FilesIconButton({ files }: { files: { name: string; path: string }[] })
           </svg>
         </a>
       ))}
+      {extra > 0 && (
+        <span className="w-10 h-10 flex items-center justify-center rounded-full bg-subtle border border-blue-500/30 text-xs font-medium text-foreground" title={`${extra} more files`}>
+          +{extra}
+        </span>
+      )}
     </div>
   )
 }

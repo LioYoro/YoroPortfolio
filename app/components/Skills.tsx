@@ -2,6 +2,7 @@ import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 
 const logos = [
+  { src: "/assets/languages/apiintegration.png", alt: "API Integration", label: "API Integration" },
   { src: "/assets/languages/Boostrap.png", alt: "Bootstrap", label: "Bootstrap" },
   { src: "/assets/languages/CSS.png", alt: "CSS", label: "CSS" },
   { src: "/assets/languages/Distrobox.png", alt: "Distrobox", label: "Distrobox" },
@@ -14,6 +15,7 @@ const logos = [
   { src: "/assets/languages/JS.png", alt: "JavaScript", label: "JavaScript" },
   { src: "/assets/languages/Laravel.png", alt: "Laravel", label: "Laravel" },
   { src: "/assets/languages/Machine_Learning.png", alt: "Machine Learning", label: "Machine Learning" },
+  { src: "/assets/languages/n8n.png", alt: "n8n", label: "n8n" },
   { src: "/assets/languages/Opencode.png", alt: "OpenCode", label: "OpenCode" },
   { src: "/assets/languages/OpenAI.png", alt: "OpenAI", label: "OpenAI" },
   { src: "/assets/languages/PHP.png", alt: "PHP", label: "PHP" },

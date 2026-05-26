@@ -107,6 +107,28 @@ export const featuredProjects: Project[] = [
 
   {
     id: 4,
+    title: "Salapi — Personal Finance Automation",
+    badges: [
+      "n8n", "Telegram Bot", "Google Sheets API", "Docker",
+      "JavaScript", "Low-Code", "Workflow Automation",
+      "Personal Finance", "FinTech", "HTML Email",
+      "ngrok", "Webhooks", "Data Privacy"
+    ],
+    description: "Salapi is a text-driven personal finance automation system that turns Telegram messages into structured financial records. Users send natural language commands such as 'gastos 310 grab' or 'gainz 20000 freelance' and the system parses, categorizes, and logs transactions into Google Sheets in real time — no app installs, no spreadsheets to open, no friction.\n\nThe platform uses n8n for workflow orchestration running locally on Docker, with ngrok providing webhook tunneling for Telegram integration. A JavaScript-based Code node handles command parsing, amount extraction, and intelligent pattern matching to classify expenses into categories like Transport, Food, Clothes, Subscriptions, Bills & Utilities, Entertainment, and Health & Fitness.\n\nEvery transaction is instantly confirmed via Telegram and appended to structured Google Sheets with date, amount, title, category, and source fields. A monthly summary workflow runs on the 1st of every month via Schedule Trigger, reading both Expenses and GAINZ sheets, filtering for the previous month, and sending a clean HTML email report with income totals, expense breakdowns by category, and net balance.\n\nThe entire system runs locally on Docker for data privacy, with n8n handling all integrations, webhooks, and scheduling. Built solo to solve a personal pain point — proving that low-code automation can deliver real utility without cloud dependency or complex infrastructure.",
+    cover: "/projects/salapi/Salapi1.png",
+    images: [
+      "/projects/salapi/Salapi1.png",
+      "/projects/salapi/Salapi2.png",
+      "/projects/salapi/Salapi3.png",
+      "/projects/salapi/Salapi4.png",
+      "/projects/salapi/Salapi5.png",
+      "/projects/salapi/Salapi6.png",
+      "/projects/salapi/Salapi7.png"
+    ]
+  },
+
+  {
+    id: 5,
     title: "Waste2Wealth",
     badges: [
       "PHP",
@@ -116,7 +138,7 @@ export const featuredProjects: Project[] = [
       "Database Management",
       "SDG-Focused",
     ],
-    description: "PHP platform for trading recyclable waste developed as a course project for Integrative Programming. I handled the full stack development, including frontend design and database management, ensuring the platform is fully scalable and responsive. Users can track the status of all bottles to be sold, with prices per kilo dynamically set based on research and economic trends, providing accurate and fair valuation for recyclable materials. On the admin side, statuses can be updated as ‘On the Way for Pickup’, ‘Pending for Pickup’, or ‘Completed’, enabling efficient management of transactions and smooth coordination between sellers and recyclers. The platform emphasizes efficiency, sustainability, and a seamless user experience for all stakeholders.",
+    description: "PHP platform for trading recyclable waste developed as a course project for Integrative Programming. I handled the full stack development, including frontend design and database management, ensuring the platform is fully scalable and responsive. Users can track the status of all bottles to be sold, with prices per kilo dynamically set based on research and economic trends, providing accurate and fair valuation for recyclable materials. On the admin side, statuses can be updated as 'On the Way for Pickup', 'Pending for Pickup', or 'Completed', enabling efficient management of transactions and smooth coordination between sellers and recyclers. The platform emphasizes efficiency, sustainability, and a seamless user experience for all stakeholders.",
     cover: "/projects/w2w/W2W.jpg",
     images: [
       "/projects/w2w/1.png",
@@ -127,7 +149,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: "JRU Online Clinic Appointment System",
     badges: [
       "PHP",
@@ -164,7 +186,7 @@ export const featuredProjects: Project[] = [
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Sustainalyze",
     badges: [
       "Machine Learning",
@@ -197,160 +219,64 @@ export const featuredProjects: Project[] = [
     ]
   },
 
-  /* ------------------ ML/IEEE Projects ------------------ */
-  
-  {
-    id: 7,
-    title: "K-Nearest Neighbors (Iris Classification)",
-    badges: ["Machine Learning", "kNN", "Classification", "Python", "Data Analysis"],
-    description: "Applied K-Nearest Neighbors to classify Iris flower species, analyzing how neighbor size affects bias–variance tradeoff. Validated with metrics and visualizations, highlighting the importance of parameter tuning and data quality.",
-    cover: "/projects/ieee/knn.PNG",
-    images: ["/projects/ieee/knn.PNG"],
-    github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/K%20Nearest%20Neighbors",
-    files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/K%20Nearest%20Neighbors/PT-P2-YORO_LeonardoAntero.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/K%20Nearest%20Neighbors/PT_P2-YORO_LeonardoAntero.ipynb" }
-    ]
-  },
-
   {
     id: 8,
-    title: "Linear Regression (NBA Analytics)",
-    badges: ["Machine Learning", "Linear Regression", "Python", "Sports Analytics"],
-    description: "Used regression to predict NBA players’ field goal attempts from performance metrics, emphasizing feature selection. Points scored alone provided high predictive power (R² = 0.969), while multiple features slightly improved accuracy.",
-    cover: "/projects/ieee/linreg.PNG",
-    images: ["/projects/ieee/linreg.PNG"],
-    github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/Linear%20Regression",
+    title: "NLP & Semantic Search Research Papers",
+    badges: [
+      "NLP", "BERT", "DistilBERT", "RoBERTa", "MiniLM",
+      "Semantic Search", "Question Answering", "Fine-Tuning",
+      "Python", "Information Retrieval"
+    ],
+    description: "A collection of research papers exploring natural language processing techniques, from foundational text preprocessing and representation methods to fine-tuning pretrained transformer models for semantic retrieval and question answering.\n\nProjects include: hate speech text preprocessing pipelines, TF-IDF/BoW/one-hot encoding comparisons, multi-task NLP models (classification 92%, sentiment 88%, POS tagging 84.6%, summarization ROUGE-1 F1 88.8%), BERT/DistilBERT/RoBERTa evaluation for extractive QA, and fine-tuning MiniLM for semantic book retrieval (MRR 0.9676). Hyperparameter optimization via Grid/Random Search achieved MRR 0.9928.\n\nAll papers follow IEEE format with corresponding Jupyter notebooks for reproducibility.",
+    cover: "/projects/ieee/bert1.PNG",
+    images: [
+      "/projects/ieee/bert1.PNG", "/projects/ieee/bert2.PNG",
+      "/projects/ieee/bert3.PNG", "/projects/ieee/bert4.PNG"
+    ],
+    github: "https://github.com/LioYoro/MachineLearningPapers",
     files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Linear%20Regression/PT-P3-YORO_LeonardoAntero.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Linear%20Regression/PT_P3-YORO_LeonardoAntero.ipynb" },    ]
+      { name: "NLP Text Preprocessing (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Preprocessing/Exer2_YORO_LeonardoAntero.pdf" },
+      { name: "NLP Text Preprocessing (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Preprocessing/Exer2_YORO_LeonardoAntero.ipynb" },
+      { name: "NLP Text Representation (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Representation/YoroLeonardoAntero_Exercise3_NLP_Representation.pdf" },
+      { name: "NLP Text Representation (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Representation/YOROLeonardAntero_Exercise3_NLP_Representation.ipynb" },
+      { name: "NLP Functions (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Functions/EM2_IEEE_Report_YOROLeonardoAntero.pdf" },
+      { name: "NLP Functions (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Functions/ExerciseM2_YoroLeonardoAntero_NLP_Models.ipynb" },
+      { name: "BERT QnA (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/BERT%20QnA/YOROLeonardoAntero%20-%20Exercise%20M3.pdf" },
+      { name: "BERT QnA (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/BERT%20QnA/YORO_Exercise_M3.ipynb" },
+      { name: "MiniLM Semantic Retrieval (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Fine-Tuning%20-%20Babysitting/YORO%2C%20LeonardoAntero%20-%20Exercise%20F2.pdf" },
+      { name: "MiniLM Semantic Retrieval (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Fine-Tuning%20-%20Babysitting/YORO_EXERCISE_2_MODEL_FINETUNING.ipynb" },
+      { name: "MiniLM Optimization (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Automated%20Optimizatiom/YORO%2C%20LeonardoAntero%20-%20Exercise%20F3.pdf" },
+      { name: "MiniLM Optimization (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Automated%20Optimizatiom/YORO_EXERCISE_3_AUTOMATED_OPTIMIZATION.ipynb" }
+    ]
   },
 
   {
     id: 9,
-    title: "Logistic Regression & Decision Tree",
-    badges: ["Machine Learning", "Multinomial Logistic Regression", "Decision Tree"],
-    description: "Compared Logistic Regression and Decision Tree for multinomial classification. Decision Tree gave higher peak accuracy but more variability; Logistic Regression was stable. Highlights strategic hyperparameter tuning and model selection for balanced predictive power.",
-    cover: "/projects/ieee/logresdt.PNG",
-    images: ["/projects/ieee/logresdt.PNG"],
-    github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees",
-    files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/PT-M1-YORO_LeonardoAntero.pdf" },
-      { name: ".ipynb file DT", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/YORO_LeonardoAntero-DT.ipynb" },
-      { name: ".ipynb file MLR", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/YORO_LeonardoAntero-MLR.ipynb" }
-    ]
-  },
-
-  {
-    id: 10,
-    title: "Multilayer Perceptron (Diabetes Prediction)",
-    badges: ["Machine Learning", "Neural Network", "MLP", "Python", "Healthcare Analytics"],
-    description: "Neural network for diabetes prediction using health attributes. Tuned hidden layers, solver, learning rate, and batch size. Adam solver outperformed others; careful complexity control improved generalization.",
-    cover: "/projects/ieee/mlp.PNG",
-    images: ["/projects/ieee/mlp.PNG"],
-    github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/Multi-Layer%20Perceptrons%20(MLP)",
-    files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Multi-Layer%20Perceptrons%20(MLP)/YORO-Leonardo Antero-IEEE.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Multi-Layer%20Perceptrons%20(MLP)/YORO_LeonardoAntero_MLP.ipynb" }
-    ]
-  },
-
-  {
-    id: 11,
-    title: "Course Project – Ensemble & Boosting",
-    badges: ["Machine Learning", "Ensemble", "Boosting", "Bagging", "MLP", "Diabetes Prediction", "Python"],
-    description: "Compared traditional models (LR, DT, SVM) with ensemble methods for diabetes detection. Boosting achieved highest predictive performance, bagging improved stability. Highlights ensemble techniques for robust healthcare ML applications.",
+    title: "Machine Learning Predictive Modeling Research Papers",
+    badges: [
+      "Machine Learning", "kNN", "Linear Regression", "Neural Network",
+      "MLP", "Ensemble", "Boosting", "Python"
+    ],
+    description: "A collection of research papers exploring classical and ensemble machine learning techniques across different domains. Covers K-Nearest Neighbors (Iris classification with bias–variance analysis), Linear Regression (NBA player performance prediction, R² = 0.969), Multinomial Logistic Regression vs Decision Trees (hyperparameter tuning comparison), Multilayer Perceptron (diabetes prediction with Adam solver optimization), and Ensemble/Boosting methods (bagging, AdaBoost, Gradient Boosting for improved healthcare classification).\n\nEach paper follows IEEE format documenting methodology, experimental results, and analysis of model tradeoffs. Demonstrates understanding of fundamental ML algorithms, feature engineering, hyperparameter tuning, and model evaluation.",
     cover: "/projects/ieee/ensemble.PNG",
-    images: ["/projects/ieee/ensemble.PNG"],
-    github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/Term%20Project",
+    images: [
+      "/projects/ieee/knn.PNG", "/projects/ieee/linreg.PNG",
+      "/projects/ieee/logresdt.PNG", "/projects/ieee/mlp.PNG",
+      "/projects/ieee/ensemble.PNG"
+    ],
+    github: "https://github.com/LioYoro/MachineLearningPapers",
     files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Term%20Project/Yeagerists_FinalProject_IEEE-1.docx" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Term%20Project/Yeagerists_FinalProject_Models-1.ipynb" }
+      { name: "KNN (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/K%20Nearest%20Neighbors/PT-P2-YORO_LeonardoAntero.pdf" },
+      { name: "KNN (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/K%20Nearest%20Neighbors/PT_P2-YORO_LeonardoAntero.ipynb" },
+      { name: "Linear Regression (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Linear%20Regression/PT-P3-YORO_LeonardoAntero.pdf" },
+      { name: "Linear Regression (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Linear%20Regression/PT_P3-YORO_LeonardoAntero.ipynb" },
+      { name: "Logistic Regression & DT (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/PT-M1-YORO_LeonardoAntero.pdf" },
+      { name: "Logistic Regression & DT (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/YORO_LeonardoAntero-DT.ipynb" },
+      { name: "MLR (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Logistic%20Regression%20(MLR)%20%26%20Decision%20Trees/YORO_LeonardoAntero-MLR.ipynb" },
+      { name: "MLP Diabetes (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Multi-Layer%20Perceptrons%20(MLP)/YORO-Leonardo%20Antero-IEEE.pdf" },
+      { name: "MLP Diabetes (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Multi-Layer%20Perceptrons%20(MLP)/YORO_LeonardoAntero_MLP.ipynb" },
+      { name: "Ensemble & Boosting (IEEE)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Term%20Project/Yeagerists_FinalProject_IEEE-1.docx" },
+      { name: "Ensemble & Boosting (.ipynb)", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Term%20Project/Yeagerists_FinalProject_Models-1.ipynb" }
     ]
-  },
-
-  {
-    id: 12,
-    title: "NLP Text Preprocessing",
-  badges: ["Python", "NLP", "Text Cleaning", "Data Preprocessing", "Pandas", "Tokenization", "Stopword Removal", "Lemmatization"],
-  description: "Applied text preprocessing techniques on a labeled Twitter dataset for hate speech and offensive language detection. Steps included lowercasing, contraction expansion, removal of usernames, URLs, numbers, special characters, stopwords, and repeated-character normalization. Preprocessing reduced the dataset from 349,862 to 199,158 words, improving semantic clarity for NLP analysis.",
-  cover: "/projects/ieee/textpre.PNG",
-  images: ["/projects/ieee/textpre.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/NLP%20Text%20Preprocessing",
-  files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Preprocessing/Exer2_YORO_LeonardoAntero.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Preprocessing/Exer2_YORO_LeonardoAntero.ipynb" }
-    ]
-},
-
-  {
-    id: 13,
-    title: "NLP Text Representation",
-  badges: ["Python", "NLP", "One-Hot Encoding", "Bag of Words", "TF-IDF", "Text Representation"],
-  description: "Introduced core NLP text representation methods including dictionary lookup, one-hot encoding, Bag of Words, and TF-IDF, converting raw text into numerical formats suitable for models. TF-IDF improved relevance weighting across corpora. Implemented in Python using scikit-learn, emphasizing understanding each representation method for downstream tasks like classification, clustering, and language modeling.",
-  cover: "/projects/ieee/textrep1.PNG",
-  images: ["/projects/ieee/textrep1.PNG","/projects/ieee/textrep2.PNG", "/projects/ieee/textrep3.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/NLP%20Text%20Representation",
-  files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Representation/YoroLeonardoAntero_Exercise3_NLP_Representation.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Text%20Representation/YOROLeonardAntero_Exercise3_NLP_Representation.ipynb" }
-    ]
-},
-
-  {
-    id: 14,
-    title: "NLP Functions",
-  badges: ["Python", "NLP", "Text Classification", "Sentiment Analysis", "POS Tagging", "Text Summarization"],
-  description: "Developed NLP models for sports journalism: text classification, sentiment analysis, part-of-speech tagging, and text summarization. Preprocessed and manually annotated datasets enabled evaluation against high-performance benchmarks: classification 92%, sentiment 88%, POS tagging 84.6%, summarization ROUGE-1 F1 88.8%. Highlights the importance of preprocessing, dataset annotation, and evaluation for effective NLP pipelines.",
-  cover: "/projects/ieee/nlpMdlsTS.PNG",
-  images: ["/projects/ieee/nlpMdls.PNG", "/projects/ieee/nlpMdlsTC.PNG","/projects/ieee/nlpMdlsSA.PNG", "/projects/ieee/nlpMdlsPoST.PNG", "/projects/ieee/nlpMdlsTS.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/NLP%20Functions",
-    files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Functions/EM2_IEEE_Report_YOROLeonardoAntero.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Functions/ExerciseM2_YoroLeonardoAntero_NLP_Models.ipynb" }
-    ]
-},
-
-  {
-    id: 15,
-    title: "BERT Question Answering",
-  badges: ["Python", "NLP", "BERT", "DistilBERT", "RoBERTa", "Question Answering", "Pretrained Models"],
-  description: "Evaluated pretrained question-answering models (BERT, DistilBERT, BERT-Large, RoBERTa) on contextual questions from local news articles. Metrics included Exact Match, F1 score, confidence, and inference time. DistilBERT achieved the best balance of accuracy and speed; RoBERTa had comparable accuracy with slightly slower inference; BERT-Large had lower scores and longest inference. Emphasizes impact of model architecture, pre-training, and fine-tuning in extractive QA.",
-  cover: "/projects/ieee/bert1.PNG",
-  images: ["/projects/ieee/bert1.PNG","/projects/ieee/bert2.PNG","/projects/ieee/bert3.PNG","/projects/ieee/bert4.PNG","/projects/ieee/bert5.PNG","/projects/ieee/bert6.PNG","/projects/ieee/bert7.PNG","/projects/ieee/bert8.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/BERT%20QnA",
-    files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/BERT%20QnA/YOROLeonardoAntero%20-%20Exercise%20M3.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/BERT%20QnA/YORO_Exercise_M3.ipynb" }
-    ]
-},
-
-  {
-    id: 16,
-    title: "MiniLM Semantic Retrieval",
-  badges: ["Python", "NLP", "MiniLM", "Semantic Search", "Sentence Embeddings", "Information Retrieval"],
-  description: "Fine-tuned MiniLM for semantic retrieval on 6,000+ book titles and descriptions using Multiple Negatives Ranking Loss. Optimized embeddings placed relevant book-query pairs closer in semantic space, evaluated via Mean Reciprocal Rank and Top-K accuracy. Optimal settings (10 epochs, weight decay 0.01, test size 0.3) achieved MRR 0.9676 and Top-1 0.9451, enabling accurate, context-aware book recommendations.",
-  cover: "/projects/ieee/bbst2.PNG",
-  images: ["/projects/ieee/bbst1.PNG","/projects/ieee/bbst2.PNG","/projects/ieee/bbst3.PNG","/projects/ieee/bbst4.PNG","/projects/ieee/bbst5.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/NLP%20Fine-Tuning%20-%20Babysitting",
-  files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Fine-Tuning%20-%20Babysitting/YORO%2C%20LeonardoAntero%20-%20Exercise%20F2.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/NLP%20Fine-Tuning%20-%20Babysitting/YORO_EXERCISE_2_MODEL_FINETUNING.ipynb" }
-    ]
-},
-
-  {
-    id: 17,
-    title: "Automated MiniLM Optimization",
-  badges: ["Python", "NLP", "MiniLM", "Semantic Retrieval", "Hyperparameter Tuning", "Grid Search", "Random Search"],
-  description: "Performed systematic hyperparameter tuning for MiniLM on semantic retrieval tasks. Explored epochs, weight decay, learning rate, batch size, warmup steps, shuffle, and mixed-precision using Grid and Random Search. Optimal configuration (10 epochs, weight decay 0.01, learning rate 3e-5, batch size 4, 500 warmup steps) produced MRR 0.9928, Top-1 0.9878, Top-3/Top-5 1.0, demonstrating highly effective embeddings for accurate, contextual book recommendations.",
-  cover: "/projects/ieee/search2.PNG",
-  images: ["/projects/ieee/search1.PNG","/projects/ieee/search2.PNG","/projects/ieee/search3.PNG","/projects/ieee/search4.PNG","/projects/ieee/search5.PNG"],
-  github: "https://github.com/LioYoro/MachineLearningPapers/tree/main/Automated%20Optimizatiom",
-  files: [
-      { name: "IEEE Paper", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Automated%20Optimizatiom/YORO%2C%20LeonardoAntero%20-%20Exercise%20F3.pdf" },
-      { name: ".ipynb file", path: "https://github.com/LioYoro/MachineLearningPapers/blob/main/Automated%20Optimizatiom/YORO_EXERCISE_3_AUTOMATED_OPTIMIZATION.ipynb" }
-    ]
-}
-
+  }
 ]
