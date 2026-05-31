@@ -44,42 +44,35 @@ export default function Banner(): React.JSX.Element {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-28 lg:pt-32 px-6"
+      className="min-h-screen flex items-center pt-28 lg:pt-32 px-6"
     >
       <div className="container mx-auto max-w-6xl">
         <AnimatedSection>
-          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
-            <div className="flex justify-center lg:justify-end relative w-full lg:w-auto">
-              <div className="relative">
-                <div className="relative">
-                  <Image
-                    src="/assets/1x1 Pic - White Background.png"
-                    alt="Leonardo Antero SP. Yoro"
-                    width={300}
-                    height={300}
-                    className="max-w-md relative rounded-full"
-                    style={{ width: "auto", height: "auto" }}
-                    priority
-                  />
-                </div>
-              </div>
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 lg:gap-16">
+            <div className="flex-shrink-0">
+              <Image
+                src="/assets/1x1 Pic - White Background.png"
+                alt="Leonardo Antero SP. Yoro"
+                width={280}
+                height={280}
+                className="rounded-full"
+                priority
+              />
             </div>
-            <div className="flex-1 space-y-6 text-center lg:text-left lg:pl-16">
-              <div>
-                <p className="text-2xl text-foreground">BSIT | Full-stack & AI</p>
-                <h1 className="text-4xl lg:text-5xl tracking-tight font-semibold text-foreground leading-tight">
-                  Building backend systems, integrating AI,
-                  <br /> and delivering practical solutions.
-                </h1>
-                <p className="text-md text-text-secondary">
-                  Dedicated BSIT student and developer focused on backend development, databases, and AI integrations.
-                </p>
-              </div>
+            <div className="flex-1 text-center lg:text-left">
+              <p className="text-2xl text-foreground">BSIT | Full-stack & AI</p>
+              <h1 className="text-4xl lg:text-5xl tracking-tight font-semibold text-foreground leading-tight mt-2">
+                Building backend systems, integrating AI,
+                <br /> and delivering practical solutions.
+              </h1>
+              <p className="text-md text-text-secondary mt-4">
+                Dedicated BSIT student and developer focused on backend development, databases, and AI integrations.
+              </p>
             </div>
           </div>
         </AnimatedSection>
         <AnimatedSection delay={200}>
-          <div className="space-y-3 pt-15 text-center lg:text-left">
+          <div className="space-y-3 mt-10 text-center lg:text-left">
             <p className="text-4xl text-foreground font-bold">
               I&apos;m a {displayedText}
               <span className="animate-pulse">|</span>
