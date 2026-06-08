@@ -54,7 +54,9 @@ export default function Experience(): React.JSX.Element {
         <div>
           <h4 className="font-semibold text-foreground">Bachelor of Science in Information Technology</h4>
           <p className="text-sm text-text-secondary">José Rizal University</p>
-          <p className="text-sm text-text-muted mt-2">2022 - Present</p>
+          <p className="text-sm text-text-muted mt-2">Cum Laude</p>
+          <p className="text-sm text-text-muted mt-2">Overall GPA: 1.56</p>
+          <p className="text-sm text-text-muted mt-2">2022 - 2026</p>
         </div>
       ),
       icon: "/logo/Jose_Rizal_University_seal.svg.png",
